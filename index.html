@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jameson</title>
+
+        <!-- link to owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- link to owl carousel theme -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link to bootstrap -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- link to css -->
+     <link rel="stylesheet" href="assets/css/styl.css">
+    <!-- link to Remix icons  -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+     <!-- link to google fonts -->
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- link  to favicon -->
+<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    
+    <section class="banner" id="banner" style="background-image: url(assets/images/banner.png);">
+       
+
+        <!-- banner content -->
+            <div class="bannerContent">
+                <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+          <div class="container">
+              <a class="navbar-brand" href="#">
+                    <img src="assets/images/logo.png" alt="" class="nav-brand">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="ri-menu-line text-white fs-3"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto ">
+                      <li class="nav-item">
+                          <a class="nav-link text-white" href="#about">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-white" href="#activities">About</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-white" href="#iteneries">Menu</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-white" href="#reviews">Testimonials</a>
+                      </li>
+
+
+                      <li class="nav-item">
+                          <a class="nav-link text-white" href="# gallery">Whiskey</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="# gallery">Drinks</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="# gallery">Contact </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="# gallery"><i class="ri-shopping-bag-4-line"></i></a>
+                    </li>
+
+
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      </header>
+
+                <div class="bannerText reveal">
+                              
+        <h1>
+            Welcome To Jameson
+        </h1>
+        <p>
+            “Love makes the world go round? Not at all. Whiskey makes it go  <br>
+              round twice as fast.” – Compton MacKenzie
+        </p>
+
+        <button  id="menuButton" class="sectionBtn">
+            Explore menu
+        </button>
+                </div>
+
+        <div id="menuModal" class="modal-overlay">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span> 
+                <h2> Our prize List</h2>
+                <div class="our-specials reveal">
+                    
+
+
+
+                        <div class="owl-carousel owl-theme">
+                            
+                            
+                            <div class="item card ">
+                                <img src="assets/images/whiskey/golden.png" alt="">
+                                
+                                <div class="card-body">
+
+                                    <h3 class="card-title">Golden</h3>
+                                    <div class="card-text">
+                                        <p>
+                                            A rich and chewy entry in the 
+                                            Jameson range, with three 
+                                            styles of pot still spirit carefully 
+                                            balanced
+                                        </p>
+                                        <span>$80</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="item card ">
+                                <img src="assets/images/whiskey/golden.png" alt="">
+                                
+                                <div class="card-body">
+
+                                    <h3 class="card-title">limited Select</h3>
+                                    <div class="card-text">
+                                        <p>
+                                            A rich and chewy entry in the 
+                                            Jameson range, with three 
+                                            styles of pot still spirit carefully 
+                                            balanced
+                                        </p>
+                                        <span>$30</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="item card ">
+                                <img src="assets/images/whiskey/golden.png" alt="">
+                                
+                                <div class="card-body">
+
+                                    <h3 class="card-title">Select Reserve</h3>
+                                    <div class="card-text">
+                                        <p>
+                                            A rich and chewy entry in the 
+                                            Jameson range, with three 
+                                            styles of pot still spirit carefully 
+                                            balanced
+                                        </p>
+                                        <span>$40</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="item card ">
+                                <img src="assets/images/whiskey/golden.png" alt="">
+                                
+                                <div class="card-body">
+
+                                    <h3 class="card-title">Black Barrel</h3>
+                                    <div class="card-text">
+                                        <p>
+                                            A rich and chewy entry in the 
+                                            Jameson range, with three 
+                                            styles of pot still spirit carefully 
+                                            balanced
+                                        </p>
+                                        <span>$40</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="item card ">
+                                <img src="assets/images/whiskey/golden.png" alt="">
+                                
+                                <div class="card-body">
+
+                                    <h3 class="card-title">Special Reserve</h3>
+                                    <div class="card-text">
+                                        <p>
+                                            A rich and chewy entry in the 
+                                            Jameson range, with three 
+                                            styles of pot still spirit carefully 
+                                            balanced
+                                        </p>
+                                        <span>$40</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="item card ">
+                                <img src="assets/images/whiskey/select.png" alt="">
+                                
+                                <div class="card-body">
+
+                                    <h3 class="card-title"></h3>
+                                    <div class="card-text">
+                                        <p>
+                                            A rich and chewy entry in the 
+                                            Jameson range, with three 
+                                            styles of pot still spirit carefully 
+                                            balanced
+                                        </p>
+                                        <span>$40</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="item card ">
+                                <img src="assets/images/whiskey/limited.png" alt="">
+                                
+                                <div class="card-body">
+
+                                    <h3 class="card-title">Golden</h3>
+                                    <div class="card-text">
+                                        <p>
+                                            A rich and chewy entry in the 
+                                            Jameson range, with three 
+                                            styles of pot still spirit carefully 
+                                            balanced
+                                        </p>
+                                        <span>$40</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                               
+
+
+                     </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+
+            </div>
+    </section>
+
+
+
+
+
+
+<!-- About section -->
+
+
+    <section class="about reveal" id="about"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="assets/images/about/a1.png" alt="">
+                            </div>
+                            <div class="col-md-6">
+                              
+                                <img src="assets/images/about/a2.png" alt="" class="uni" id="uni1">
+                            
+                               
+                                <img src="assets/images/about/a3.png" alt="" class="uni">
+                              
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="about-text">
+                            <div class="sectionHead">
+                                <h2>
+                                    About
+
+                                </h2>
+                                <div class="line" id="a-line"></div>
+                            </div>
+
+                                       <p>
+                                            Jameson brings a light floral fragrance on the nose, <br>
+                                            peppered with spicy wood and sweet notes before an <br>
+                                            exceptional balance of spicy, nutty and vanilla tones on <br>
+                                            the palate with hints of sweet sherry that develop into <br>
+                                            an incredibly smooth and mellow finish.
+                                      </p>
+
+                                      <button class="sectionBtn" id="readMore">Read More</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+
+<!-- reserved wines -->
+
+<section class="reserved-whiskey reveal">
+    <div class="container">
+        <div class="sectionHead">
+            <h2>
+                
+                Our Reserved Whiskey
+
+            </h2>
+            <div class="line" id="a-line"></div>
+
+
+            <p>
+                We reserve our best for the people we love
+            </p>
+        </div>
+
+       
+
+        <div class="Cardsholder" id="cardsContainer">
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Whiskey section -->
+
+
+
+<section class="reserved-whiskey reveal">
+    <div class="container">
+        <div class="sectionHead">
+            <h2>
+                
+                Whiskey
+
+            </h2>
+            <div class="line" id="a-line"></div>
+
+
+            <p>
+                We reserve our best for the people we love
+            </p>
+        </div>
+
+       
+
+        <div class="Cardsholder2" id="WhiskeyContainer">
+
+        </div>
+    </div>
+</section>
+
+
+<div class="section friendship reveal">
+    <div class="container">
+        
+    <div class="btn-p">
+        <button class="sectionBtn" id="openMenu">Explore Menu</button>
+
+        <p>
+             Friendship is like whisky, the older the better
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <img src="assets/images/friendship/Rectangle 7.png" alt="">
+        </div>
+        <div class="col-md-6">
+            <img src="assets/images/friendship/Rectangle 8.png" alt="">
+        </div>
+    </div>
+
+    <div class="btn-p">
+
+
+        <p>
+            Be Part of Our Smiling Family To Recieve <br>
+            Notifications And Updates
+       </p>
+
+        <button class="sectionBtn" id="submit">Join Us</button>
+
+       
+    </div>
+    
+    </div>
+</div>
+
+
+
+<div class="sectionHead reveal" id="testheader">
+    <h2>
+        
+        Testimonials
+
+    </h2>
+    <div class="line" id="a-line"></div>
+
+
+    <p>
+        We reserve our best for the people we love
+    </p>
+</div>
+
+
+
+
+<section class="testimonials reveal" id="testimonial" style="background-image: url(assets/images/footer-bg.png);">
+    <div class="container">
+     
+        
+        <div class="testimonilsContainer" id="testimonialContainer">
+
+        </div>
+
+
+
+        <div class="btn-form">
+
+
+          
+
+
+            <form action="submit">
+                <input type="button" value="Find Out More"  id="submit" class="sectionBtn">
+                <input type="text" placeholder="Enter your email" id="email">
+                
+            </form>
+
+        </div>
+
+
+       
+        </div>
+
+
+
+
+        <div class="overlay reveal" id="overlay"></div>
+        <div class="login-popup" id="login-popup">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" /><br><br>
+            <input type="password" placeholder="Password" /><br><br>
+            <button onclick="closeLogin()">Login</button>
+            <button onclick="closeLogin()">Cancel</button>
+        </div>
+
+
+        
+        <div class="footer">
+
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="">
+            </div>
+
+            <div class="content">
+                <div class="details">
+                    <ul>
+                        <li>Terms and conditions</li>
+                        <li>Our Story</li>
+                        <li>Sponsorship</li>
+                        <img src="assets/images/emojione_no-one-under-eighteen (1).png" alt="" style="width: 32px; height: 32px; object-fit: cover; margin-top: 20px; align-self: end;">
+                    </ul>
+                </div>
+                <div class="details">
+                    <ul>
+                        <li>Privacy and Policy</li>
+                        <li>Our campaign</li>
+                        <li>FAQs</li>
+                    </ul>
+                </div>
+
+                <div class="details">
+                    <div class="socials">
+                        <i class="ri-twitter-line"></i>
+                        <i class="ri-instagram-line"></i>
+                        <i class="ri-linkedin-box-line"></i>
+                        <i class="ri-linkedin-box-line"></i>
+                        <i class="ri-instagram-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- link to jquer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- font owesome -->
+<script src="https://kit.fontawesome.com/1259e0c2c1.js" crossorigin="anonymous"></script>
+    <!-- link to owl carousel js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- link to bootstrap js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- link to main js -->
+     <script src="assets/js/main.js"></script>
+</body>
+</html>

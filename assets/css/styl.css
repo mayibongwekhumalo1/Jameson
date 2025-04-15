@@ -1,0 +1,660 @@
+.sectionBtn {
+  background-color: #be0a0a;
+  color: white;
+  padding: 1em 1.5em;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: lighter;
+  width: 180px;
+  height: 50px;
+}
+.sectionBtn:hover {
+  background-color: white;
+  color: #be0a0a;
+  border: 1px solid #be0a0a;
+  font-weight: 600;
+}
+
+.sectionHead {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sectionHead h2 {
+  font-size: 48px;
+  font-family: Oleo Script Swash Caps, sans-serif;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.sectionHead .line {
+  width: 200px;
+  background-color: #be0a0a;
+  height: 3px;
+  margin-top: 20px;
+}
+.sectionHead #a-line {
+  width: 250px;
+}
+.sectionHead p {
+  margin-top: 20px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.05;
+  overflow-x: hidden;
+  font-size: 15px;
+  font-weight: 300;
+  background-color: #F9F9F9;
+  font-family: poppins, sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  text-align: center;
+  position: relative;
+}
+.banner .bannerContent {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.banner .bannerContent .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 24px;
+  height: 12vh;
+}
+.banner .bannerContent .navbar .nav-menu {
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.banner .bannerContent .navbar .nav-menu .nav-link {
+  transition: 0.7s ease;
+  color: white;
+  cursor: pointer;
+}
+.banner .bannerContent .navbar .nav-menu .nav-linkhover {
+  background-color: #be0a0a;
+  padding: 10px 15px;
+}
+.banner .bannerContent .navbar .nav-logo {
+  width: 10%;
+  height: 100%;
+  cursor: pointer;
+}
+.banner .bannerContent .navbar .nav-logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner .bannerContent .navbar .hamburger {
+  display: none;
+  cursor: pointer;
+}
+.banner .bannerContent .navbar .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+.banner .bannerContent .bannerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+.banner .bannerContent .bannerText h1 {
+  font-size: 5rem;
+  font-family: Oleo Script Swash Caps, sans-serif;
+}
+.banner .bannerContent .bannerText p {
+  margin-top: 40px;
+}
+.banner .bannerContent .bannerText button {
+  align-self: center;
+  margin-top: 30px;
+}
+.banner .modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 9999;
+}
+.banner .modal-overlay .modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1020px;
+  z-index: 2000;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-50px);
+  animation: slideDown 0.3s ease-in-out forwards;
+}
+.banner .modal-overlay .modal-content h2 {
+  font-weight: 400;
+  font-size: 25px;
+  font-family: Oleo Script Swash Caps, sans-serif;
+  margin-bottom: 20px;
+  color: #be0a0a;
+}
+.banner .modal-overlay .modal-content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #333;
+}
+.banner .modal-overlay .modal-content .our-specials {
+  width: 100%;
+}
+.banner .modal-overlay .modal-content .our-specials .owl-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.banner .modal-overlay .modal-content .our-specials .owl-carousel .item {
+  height: 350px;
+  width: 250px;
+  font-size: 10px;
+  text-align: start;
+}
+.banner .modal-overlay .modal-content .our-specials .owl-carousel .item .img {
+  width: 100%;
+}
+.banner .modal-overlay .modal-content .our-specials .owl-carousel .item h3 {
+  margin-bottom: 20px;
+}
+.banner .modal-overlay .modal-content .our-specials .owl-carousel .item p {
+  margin-bottom: 20px;
+}
+.banner .modal-overlay .modal-content .our-specials .owl-carousel .item span {
+  background-color: #be0a0a;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.fa-solid {
+  color: #be0a0a;
+  padding: 0.5em 0.7em;
+  background-color: white;
+  border-radius: 100%;
+  font-size: 20px;
+  border: 2px solid #be0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.about .container {
+  text-align: center;
+}
+.about .container .row .col-md-6 .row .col-md-6 img {
+  width: 100%;
+  height: 480px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: center;
+     object-position: center;
+}
+.about .container .row .col-md-6 .row .col-md-6 .uni {
+  height: 225px;
+}
+.about .container .row .col-md-6 .row .col-md-6 #uni1 {
+  margin-bottom: 1.8rem;
+}
+.about .container .row .col-md-6 .about-text {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.about .container .row .col-md-6 .about-text button {
+  margin-top: 20px;
+}
+
+.reserved-whiskey {
+  min-height: 650px;
+  width: 100%;
+  background-color: #f3f3f3;
+  padding-top: 30px;
+}
+.reserved-whiskey .container .Cardsholder, .reserved-whiskey .container .Cardsholder2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+}
+.reserved-whiskey .container .Cardsholder .card, .reserved-whiskey .container .Cardsholder2 .card {
+  width: 250px;
+  height: 450px;
+  background: white;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  z-index: 2;
+}
+.reserved-whiskey .container .Cardsholder .card:hover, .reserved-whiskey .container .Cardsholder2 .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.reserved-whiskey .container .Cardsholder .card .card img, .reserved-whiskey .container .Cardsholder2 .card .card img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.reserved-whiskey .container .Cardsholder .card .starts, .reserved-whiskey .container .Cardsholder2 .card .starts {
+  display: flex;
+  justify-content: start;
+  padding-right: 15px;
+  align-items: start;
+  gap: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #be0a0a;
+  font-size: 20px;
+}
+.reserved-whiskey .container .Cardsholder .card #stars, .reserved-whiskey .container .Cardsholder2 .card #stars {
+  margin-left: 0;
+}
+.reserved-whiskey .container .Cardsholder .card .card-content, .reserved-whiskey .container .Cardsholder2 .card .card-content {
+  padding: 15px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.reserved-whiskey .container .Cardsholder .card .card-content h2, .reserved-whiskey .container .Cardsholder2 .card .card-content h2 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #363636;
+  font-weight: 600;
+  font-family: Oleo Script Swash Caps, sans-serif;
+}
+.reserved-whiskey .container .Cardsholder .card .card-content .p, .reserved-whiskey .container .Cardsholder2 .card .card-content .p {
+  color: #686868;
+}
+.reserved-whiskey .container .Cardsholder .card .card-content button, .reserved-whiskey .container .Cardsholder2 .card .card-content button {
+  width: 110px;
+  height: 40px;
+  padding: 0.5em 1em;
+  margin-top: 20px;
+  font-size: 12px;
+  border: none;
+  background-color: #ECD0D0;
+  color: #be0a0a;
+  border-radius: 20px;
+  font-weight: 600px;
+}
+
+.friendship {
+  width: 100%;
+  min-height: 800px;
+  background-color: #f3f3f3;
+}
+.friendship .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.friendship .container .btn-p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.friendship .container .btn-p p {
+  font-family: Oleo Script Swash Caps, sans-serif;
+  font-weight: 700;
+}
+.friendship .container .row {
+  margin-top: 20px;
+}
+.friendship .container .row .col-md-6 img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.testimonials {
+  width: 100%;
+  min-height: 900px;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.testimonials img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.testimonials .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: auto 10px;
+  text-align: center;
+}
+.testimonials .card-content span {
+  justify-self: baseline;
+}
+.testimonials .card-content .starts {
+  display: flex;
+  justify-content: start;
+  padding-right: 15px;
+  align-items: start;
+  gap: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #be0a0a;
+  font-size: 20px;
+}
+.testimonials .btn-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.testimonials .btn-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+.testimonials .btn-form form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px;
+}
+.testimonials .btn-form form #submit {
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+}
+.testimonials .login-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  z-index: 1000;
+}
+.testimonials .login-popup input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+.testimonials .login-popup button {
+  width: 100%;
+  padding: 10px;
+  background-color: #be0a0a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.testimonials .login-popup.active {
+  display: block;
+}
+.testimonials .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.testimonials .overlay.active {
+  display: block;
+}
+.testimonials .footer {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 20px;
+  gap: 40px;
+}
+.testimonials .footer .logo img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.testimonials .footer .content {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.testimonials .footer .content a {
+  color: white;
+  font-size: 30px;
+}
+.testimonials .footer .content .details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: start;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+.testimonials .footer .content .details .socials {
+  font-size: 24px;
+}
+.testimonials .footer .content .details .socials i {
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active.bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active.bar:nth-child(2) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active.bar:nth-child(2) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 12vh;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-menu .nav-item {
+    margin-top: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .banner-text h1 {
+    font-size: 26px;
+  }
+  .sectionHead {
+    margin-top: 20px;
+  }
+  .sectionHead h2 {
+    font-size: 28px;
+  }
+  .bannerContent {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .bannerContent h1 {
+    font-size: large;
+  }
+  .bannerContent p {
+    margin-top: 40px;
+  }
+  .bannerContent button {
+    align-self: center;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .sectionHead h2 {
+    font-size: 28px;
+  }
+  .bannerContent {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .bannerContent h1 {
+    font-size: 3rem;
+  }
+}/*# sourceMappingURL=styl.css.map */
