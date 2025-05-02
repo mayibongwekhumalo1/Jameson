@@ -107,18 +107,7 @@ body {
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 
 a{
     text-decoration: none;
@@ -127,36 +116,103 @@ a{
 
 
 
-
-* Preloader Fullscreen Background */
-#preloader {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #111;
+.nav-bar {
+    position: relative;
+    background-color: #1111114a;
+    backdrop-filter: blur(5px);
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
+    height: 10vh;
+    padding-right: 30px;
+    position: fixed;
+    z-index: 3;
+}
+
+.nav-bar .nav-branding {
+    width: 100px;
+    height: 100%;
+}
+
+.nav-bar .nav-branding img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nav-bar .nav-menu {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    gap: 20px;
+}
+
+.nav-bar .nav-menu li a {
+    color: #ffff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nav-bar .nav-menu li .active,
+.nav-bar .nav-menu li a:hover {
+    color: $orange; /* Make sure $orange is defined in your CSS or preprocessor */
+}
+
+.nav-bar .hamburger {
+    position: fixed;
+    right: 20; /* Changed from left to right */
+    display: none; /* Initially hidden on larger screens */
+    background-color: #111111d1;
+    padding: 20px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.nav-bar .hamburger .bar {
+    width: 30px;
+    height: 5px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out; /* Added transition for animation */
+}
+
+
+
+
+
+dialog {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
     z-index: 1000;
-    transition: opacity 1s ease-out, visibility 0.5s;
-}
-
-
-.loader {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #fff;
-    border-top-color: #ff5733;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-
-
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  dialog h2 {
+    margin-top: 0;
+  }
 
 
 
@@ -165,6 +221,9 @@ a{
 // banner
 
 .banner{
+
+    
+    position: relative;
         background-size: cover;
         background-position: center top;
         height: 100vh;
@@ -172,12 +231,9 @@ a{
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
         text-align: center;
-        position: relative;
-
+        background: rgba(0, 0, 0, 0.7);
      
   
-
- 
 
 
 
@@ -187,49 +243,26 @@ a{
 
 .bannerContent{
   
-   
+   background-color: #1111114a;
     position: absolute;
     top: 0;
     left: 0%;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.3);
+    height: 90vh;
+    margin-top: 10vh;
 
    
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 24px;
-    height: 12vh;
-
-   
-    .nav-brand{
-        width: 10%;
-        height: 100%;
-        cursor: pointer;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-
-   
-  
-}
-
-
 
 
     
 
-   
+
+    
+
+
+
 
    
-
 
 
     .bannerText{
@@ -244,22 +277,14 @@ a{
         height: 100%;
 
         h1{
-            font-size: 5rem;
+            font-size: 4em;
             font-family: Oleo Script Swash Caps, sans-serif;
             animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
 
         }
 
 
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: orange; }
-        }
+      
 
 
         
@@ -473,7 +498,7 @@ a{
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 overflow: hidden;
                 transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-                z-index: 2;
+                z-index: 1;
                 
                 &:hover{
                     transform: translateY(-5px);
@@ -535,6 +560,11 @@ a{
                         border-radius: 20px;
                         font-weight: 600px;
 
+                        &:hover{
+                            background-color: #be0a0a;
+                            color: white;
+                        }
+
                     }
                 }
             }
@@ -589,7 +619,7 @@ a{
 
 .testimonials{
     width: 100%;
-    min-height: 900px;
+    min-height: 600px;
    background-position: center top;
  background-size: cover;
 background-repeat: no-repeat;
@@ -713,7 +743,7 @@ img{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 2;
 }
 .overlay.active {
     display: block;
@@ -788,141 +818,88 @@ img{
 
 
 
+@media (max-width: 992px) {
 
 
-
-@media(max-width:992px){
-   
-    .hamburger{
-        display: block;
+    body{
+        border: 2px solid $orange;
+        overflow-x: hidden;
     }
 
-    .hamburger.active.bar:nth-child(2){
+    .nav-bar {
+        backdrop-filter: blur(0);
+        background-color: transparent;
+    }
+
+    .nav-bar .hamburger {
+        display: block; 
+    }
+
+    .nav-bar .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: 100vh; 
+        background-color: rgba(9, 9, 9, 0.86);
+        backdrop-filter: blur(5px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+        z-index: 10; 
+        padding: 20px 0;
+    }
+
+    // .nav-bar .nav-menu li {
+    //     margin: 15px 0;
+    // }
+
+    .nav-bar .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
 
-    .hamburger.active.bar:nth-child(2){
-        transform: translateY(8px) rotate(45deg);
+    .nav-bar .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
     }
 
-    .hamburger.active.bar:nth-child(2){
-        transform: translateY(-8px) rotate(-45deg);
+    .nav-bar .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
     }
 
-    .nav-menu{
-        position: fixed;
-        left: -100%;
-        top: 12vh;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-
-        transition: 0.3s;
-
-        .nav-item{
-            margin-top: 16px 0;
-        }
-    }
-
-    .nav-menu.active{
+    .nav-bar .nav-menu.active {
         left: 0;
     }
 
-
-    .banner-text h1{
-        font-size: 26px;
-    }
-    
-.sectionHead{
-
-    margin-top: 20px;
-
-
-    h2{
-        font-size: 28px;
-      
-    }
-
-}
-
-
-
-
-.bannerContent{
-  
-   
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.3);
-
-    h1{
+    .bannerContent h1 {
         font-size: large;
     }
-    p{
+
+    .bannerContent p {
         margin-top: 40px;
     }
-    button{
+
+    .bannerContent button {
         align-self: center;
         margin-top: 30px;
     }
 
+    .sectionHead {
+        font-size: 32px;
+        margin-top: 20px;
+    }
 
-   
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-@media(max-width:576px){
-
-  
-    
-.sectionHead{
-
-
-
-    h2{
+    .sectionHead h2 {
         font-size: 28px;
-      
     }
-
-}
-
+    
 
 
 
-.bannerContent{
-  
-   
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.3);
-
-    h1{
-        font-size: 3rem;
-      
-    }
-
-   
-
-
-   
-}
 
 
 
 }
+
+
+

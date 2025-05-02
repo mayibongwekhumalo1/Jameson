@@ -25,93 +25,78 @@
 
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- link  to favicon -->
 <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 
+<!-- link to aos -->
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
 </head>
 <body>
 
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
 
     
-    <section class="banner" id="banner" style="background-image: url(assets/images/banner.png);">
+    <section class="banner reveal" id="banner"  style="background-image: url(assets/images/banner.png);">
        
 
+        <nav class="nav-bar">
+            <a href="#" class="nav-branding">
+                <img src="assets/images/logo.png" alt="">
+            </a>
+            
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+
+            <ul class="nav-menu">
+              <li class="navitem"><a href="#banner" class="navlink active">Home</a></li>
+              
+              <li class="navitem"><a href="#about" class="navlink">About</a></li>
+              <li class="navitem"><a href="#" class="navlink">Menu</a></li>
+              <li class="navitem"><a href="#testimonials" class="navlink">Testimonials</a></li>
+              <li class="navitem"><a href="# whiskey" class="navlink">Whiskey</a></li>
+              <li class="navitem"><a href="#" class="navlink">Drinks</a></li>
+              <li class="navitem"><a href="#contact" class="navlink">Contact</a></li>
+            </ul>
+          
+           
+
+          </nav>
+          
         <!-- banner content -->
             <div class="bannerContent">
-                <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-          <div class="container">
-              <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.png" alt="" class="nav-brand">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="ri-menu-line text-white fs-3"></i>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ms-auto ">
-                      <li class="nav-item">
-                          <a class="nav-link text-white" href="#about">Home</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link text-white" href="#activities">About</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link text-white" href="#iteneries">Menu</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link text-white" href="#reviews">Testimonials</a>
-                      </li>
 
 
-                      <li class="nav-item">
-                          <a class="nav-link text-white" href="# gallery">Whiskey</a>
-                      </li>
-
-                      <li class="nav-item">
-                        <a class="nav-link text-white" href="# gallery">Drinks</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="# gallery">Contact </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="# gallery"><i class="ri-shopping-bag-4-line"></i></a>
-                    </li>
-
-
-                  </ul>
-              </div>
-          </div>
-      </nav>
-      </header>
-
-                <div class="bannerText reveal">
+                <div class="bannerText">
                               
-        <h1>
+        <h1 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" data-aos-easing="ease-in-out">
             Welcome To Jameson
         </h1>
-        <p>
+        <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300" data-aos-easing="ease-in-out">
             “Love makes the world go round? Not at all. Whiskey makes it go  <br>
               round twice as fast.” – Compton MacKenzie
         </p>
 
-        <button  id="menuButton" class="sectionBtn">
+        <button  id="menuButton" class="sectionBtn" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400" data-aos-easing="ease-in-out">
             Explore menu
         </button>
                 </div>
 
-        <div id="menuModal" class="modal-overlay">
+        <div id="menuModal" class="modal-overlay" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500" data-aos-easing="ease-in-out">
             <div class="modal-content">
                 <span class="close-btn">&times;</span> 
                 <h2> Our prize List</h2>
-                <div class="our-specials reveal">
+                <div class="our-specials ">
                     
 
 
@@ -292,15 +277,15 @@
 <!-- About section -->
 
 
-    <section class="about reveal" id="about"> 
+    <section class="about reveal" id="about" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" data-aos-easing="ease-in-out"> 
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" data-aos-easing="ease-in-out">
                                 <img src="assets/images/about/a1.png" alt="">
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300" data-aos-easing="ease-in-out">
                               
                                 <img src="assets/images/about/a2.png" alt="" class="uni" id="uni1">
                             
@@ -314,14 +299,14 @@
                     <div class="col-md-6">
                         <div class="about-text">
                             <div class="sectionHead">
-                                <h2>
+                                <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" data-aos-easing="ease-in-out">
                                     About
 
                                 </h2>
                                 <div class="line" id="a-line"></div>
                             </div>
 
-                                       <p>
+                                       <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300" data-aos-easing="ease-in-out">
                                             Jameson brings a light floral fragrance on the nose, <br>
                                             peppered with spicy wood and sweet notes before an <br>
                                             exceptional balance of spicy, nutty and vanilla tones on <br>
@@ -329,7 +314,20 @@
                                             an incredibly smooth and mellow finish.
                                       </p>
 
-                                      <button class="sectionBtn" id="readMore">Read More</button>
+                                      <!-- <dialog id="myDialog"> -->
+                                        <!-- At Jameson, a deep pride permeates their whiskey-making journey, meticulously
+                                         overseeing every step from grain to glass. They carefully select the finest 
+                                         Irish barley and pure water, employing a signature triple distillation process 
+                                         that imparts exceptional smoothness. Their expertise extends to the art of cask selection,
+                                          aging their spirit in a combination of sherry and bourbon barrels to develop a complex 
+                                          character and rich flavors, a testament to their unwavering dedication to quality.
+                                      </dialog> -->
+                                      
+                                      
+                                      
+
+
+                                      <button class="sectionBtn" id="openDialogBtn"  data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500">Read More</button>
                         </div>
                     </div>
 
@@ -340,10 +338,10 @@
 
 <!-- reserved wines -->
 
-<section class="reserved-whiskey reveal">
+<section class="reserved-whiskey " data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" data-aos-easing="ease-in-out">
     <div class="container">
         <div class="sectionHead">
-            <h2>
+            <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" data-aos-easing="ease-in-out"  class="text-center">
                 
                 Our Reserved Whiskey
 
@@ -358,8 +356,9 @@
 
        
 
-        <div class="Cardsholder" id="cardsContainer">
+        <div class="Cardsholder" id="cardsContainer" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" data-aos-easing="ease-in-out">
 
+            
         </div>
     </div>
 </section>
@@ -370,7 +369,7 @@
 
 
 
-<section class="reserved-whiskey reveal">
+<section class="reserved-whiskey reveal " data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" data-aos-easing="ease-in-out">
     <div class="container">
         <div class="sectionHead">
             <h2>
@@ -388,17 +387,17 @@
 
        
 
-        <div class="Cardsholder2" id="WhiskeyContainer">
+        <div class="Cardsholder2" id="WhiskeyContainer" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" data-aos-easing="ease-in-out">
 
         </div>
     </div>
 </section>
 
 
-<div class="section friendship reveal">
+<div class="section friendship ">
     <div class="container">
         
-    <div class="btn-p">
+    <div class="btn-p" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" data-=" ease-in-out">
         <button class="sectionBtn" id="openMenu">Explore Menu</button>
 
         <p>
@@ -407,23 +406,23 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1500" data-aos-easing="ease-in" >
             <img src="assets/images/friendship/Rectangle 7.png" alt="">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1500" data-aos-easing="ease-in">
             <img src="assets/images/friendship/Rectangle 8.png" alt="">
         </div>
     </div>
 
-    <div class="btn-p">
+    <div class="btn-p" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
 
 
-        <p>
+        <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             Be Part of Our Smiling Family To Recieve <br>
             Notifications And Updates
        </p>
 
-        <button class="sectionBtn" id="submit">Join Us</button>
+        <button class="sectionBtn" id="submit" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Join Us</button>
 
        
     </div>
@@ -433,8 +432,8 @@
 
 
 
-<div class="sectionHead reveal" id="testheader">
-    <h2>
+<div class="sectionHead mt-5" id="testheader">
+    <h2 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
         
         Testimonials
 
@@ -442,7 +441,7 @@
     <div class="line" id="a-line"></div>
 
 
-    <p>
+    <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
         We reserve our best for the people we love
     </p>
 </div>
@@ -450,25 +449,26 @@
 
 
 
-<section class="testimonials reveal" id="testimonial" style="background-image: url(assets/images/footer-bg.png);">
+<section class="testimonials " id="testimonial" style="background-image: url(assets/images/footer-bg.png);">
     <div class="container">
      
         
-        <div class="testimonilsContainer" id="testimonialContainer">
+        <div class="testimonilsContainer reveal" id="testimonialContainer" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
 
         </div>
 
 
 
-        <div class="btn-form">
+        <div class="btn-form" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
 
 
           
 
 
             <form action="submit">
-                <input type="button" value="Find Out More"  id="submit" class="sectionBtn">
-                <input type="text" placeholder="Enter your email" id="email">
+                
+                <input type="button" value="Find Out More"  id="submit"  class="sectionBtn">
+                <input type="email" placeholder="Enter your email" id="email">
                 
             </form>
 
@@ -481,7 +481,7 @@
 
 
 
-        <div class="overlay reveal" id="overlay"></div>
+        <div class="overlay " id="overlay"></div>
         <div class="login-popup" id="login-popup">
             <h2>Login</h2>
             <input type="text" placeholder="Username" /><br><br>
@@ -589,6 +589,14 @@
 
     <!-- link to bootstrap js -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS Js -->
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
     <!-- link to main js -->
      <script src="assets/js/main.js"></script>
 </body>
