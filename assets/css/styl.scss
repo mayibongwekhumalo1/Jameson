@@ -181,7 +181,7 @@ a {
 }
 
 .nav-bar {
-  position: relative;
+  
   background-color: #1111114a;
   backdrop-filter: blur(5px);
   display: flex;
@@ -189,7 +189,7 @@ a {
   justify-content: space-between;
   height: 10vh;
   padding-right: 30px;
-  position: fixed;
+  position: sticky;
   z-index: 3;
 }
 
@@ -206,7 +206,7 @@ a {
 
 .nav-bar .nav-menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
@@ -240,13 +240,8 @@ a {
 }
 
 .nav-bar .hamburger {
-  position: fixed;
-  right: 20;
+  
   display: none;
-  background-color: #111111d1;
-  padding: 20px;
-  width: 70px;
-  height: 70px;
   cursor: pointer;
   z-index: 20;
 }
@@ -804,11 +799,13 @@ dialog h2 {
   }
 }
 
+
+
+
+
+
 @media (max-width: 992px) {
-  body {
-   
-    overflow-x: hidden;
-  }
+  
 
   .bannerContent{
     height: 100vh;
@@ -817,11 +814,11 @@ dialog h2 {
   .nav-bar {
     backdrop-filter: blur(0);
     background-color: rgba(9, 9, 9, 0.86);
+    
   }
 
   .nav-bar .hamburger {
-    left: 80%;
-    top: 15px;
+   
     display: block;
   }
 
@@ -841,9 +838,7 @@ dialog h2 {
     padding: 20px 0;
   }
 
-  // .nav-bar .nav-menu li {
-  //     margin: 15px 0;
-  // }
+ 
 
   .nav-bar .hamburger.active .bar:nth-child(2) {
     opacity: 0;
@@ -883,3 +878,4 @@ dialog h2 {
     font-size: 28px;
   }
 }
+

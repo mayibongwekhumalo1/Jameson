@@ -65,15 +65,6 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-// const dialog = document.getElementById("myDialog");
-// const openDialogBtn = document.getElementById("openDialogBtn");
-
-// openDialogBtn.addEventListener("click", () => {
-//   dialog.showModal(); // Use showModal() to display as a modal
-// });
-
-// // Closing is handled by the <form method="dialog">
-// // You can add additional JavaScript if needed for specific close actions
 
 const cardsData = {
   whiskey: [
