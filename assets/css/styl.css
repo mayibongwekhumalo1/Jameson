@@ -173,7 +173,7 @@ a {
   justify-content: space-between;
   height: 10vh;
   padding-right: 30px;
-  position: sticky;
+  position: fixed;
   z-index: 3;
 }
 
@@ -225,6 +225,7 @@ a {
 }
 
 .nav-bar .hamburger {
+  margin-top: 10px;
   display: none;
   cursor: pointer;
   z-index: 20;
